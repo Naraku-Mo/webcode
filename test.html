@@ -1,0 +1,80 @@
+<!-- html5的文档声明 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- head部分浏览器读取，不会显示在网页中，可见内容写在body里-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 元数据名称和值 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 搜索引擎相关：keywords网页关键字设置 description网页简介 -->
+    <meta name="keywords" content="姐姐">
+    <!-- meta设置网页元数据，包括字符集，UTF-8万国码 -->
+    <title>前端学习</title>
+    <!-- 引入图标字体 使用方法：class="fas/fab ..." 可直接修改颜色和大小 -->
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="./font_icon/css/font-awesome.css"> 
+</head>
+<body>
+    <!-- 换行和水平线是单标签 -->
+    <strong><del><em>加油卷吧</em></del></strong><hr>
+    <ins> <blockquote>种一棵树最好的时间是十年前，</blockquote></ins>
+    <q>其次是现在。</q><br>
+    <!-- 放个gif图也行，不用考虑格式问题！ -->
+    <!-- alt:替换文本；title:提示文本，鼠标悬停显示 -->
+    <!-- 默认等比例缩放 -->
+    <div class="sample">
+        <img class="NicePic" src="./8.jpg" alt="这有个帅哥" title="帅气的我" weight="100px" height="100px"><br>
+    </div>
+    <!-- href（跳转地址）的值可以为#，空链接 -->
+    <!-- 给baidu这个词加上超链接 -->
+    <a  class="fa fa-hand-scissors-o" aria-hidden="true" style="color:green;" href="https://www.baidu.com" target="_blank">baidu</a>
+    <!-- <ul>无序列表标签，内部只能出现<li> unorder list-->
+    <h2>姐姐不喜欢吃的</h2>
+    <!-- order list <ol>有序列表</ol> -->
+    <ol>
+        <li>&nbsp猪猪</li>
+        <li>&nbsp蛙蛙</li>
+        <li>&nbsp榴莲</li>
+    </ol>
+    <!-- div list自定义列表 -->
+    <dl>
+        <!-- <i class="fa fa-heart" aria-hidden="true"></i> -->
+        <dt class="fa fa-heart" style="color:red;">&nbsp喜欢吃的</dt>
+        <dd>螃蟹</dd>
+        <dd>虾虾</dd>
+    </dl>
+    <div class="box">
+        
+        <div class="pointer">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            
+        </div>
+        <div class="photo">
+            <ul>
+                <li><a href="javascript:;"><img src="./0.jpg" alt=""></a></li>
+                <li><a href="javascript:;"><img src="./1.jpg" alt=""></a></li>
+                <li><a href="javascript:;"><img src="./2.jpg" alt=""></a></li>
+                <li><a href="javascript:;"><img src="./3.jpg" alt=""></a></li>
+                <li><a href="javascript:;"><img src="./4.jpg" alt=""></a></li>
+                <li><a href="javascript:;"><img src="./5.jpg" alt=""></a></li>
+                <li><a href="javascript:;"><img src="./6.jpg" alt=""></a></li>
+                <li><a href="javascript:;"><img src="./7.jpg" alt=""></a></li>
+                <li><a href="javascript:;"><img src="./8.jpg" alt=""></a></li>
+                <li><a href="javascript:;"><img src="./9.jpg" alt=""></a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
