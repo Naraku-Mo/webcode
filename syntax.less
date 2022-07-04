@@ -1,22 +1,26 @@
 // less可编译为css语法，会自动存储到同名css文件中，小心覆盖！
 @h: 50px;
 
-* {
-    list-style: none;
+// * {
+//      list-style: none;
 
-}
-a{
+// }
+a {
     text-decoration: none;
 }
+
 .box0 {
     height: @h;
     width: $height;
 }
 
 .box_p54 {
+
     background-color: bisque;
-    width:220px;
+    width: 220px;
+
     ul {
+        list-style: none;
         height: 650px;
         // width: 220px;
         display: flex;
@@ -35,75 +39,230 @@ a{
     }
 }
 
-dl {
+.love {
+    list-style: none;
+    margin-left: 500px;
     width: 300px;
-    .item{
-        margin: 20px;
+
+    .item {
+        margin: 20px 50px;
     }
+
+    .item::before {
+        content: '❤️';
+        font-size: 16px;
+        margin: 0 5px;
+    }
+
     .item:hover {
         background-color: bisque;
     }
-    .item:active{
+
+    .item:active {
         color: aqua;
     }
 
 }
-.News_nav{
+
+.News_nav {
     height: 520px;
     width: 350px;
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     flex-flow: column wrap;
-    background-color:white;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0,0.5);
+    background-color: white;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
     position: relative;
     bottom: 500px;
     float: right;
     border-top: 2px solid gray;
     margin-right: 20px;
-    .News_title{
-        margin:0;
+
+    .News_title {
+        margin: 0;
         padding-top: 10px;
+
         // display: inline-block;
         // border-top: 3px solid red;
-        a{
+        a {
             padding-top: 10px;
-            color:rgb(56, 53, 53);
+            color: rgb(56, 53, 53);
             border-top: 2px solid red;
             // text-decoration: none;
-           
+
         }
     }
-   
-    .News_pic{
-        margin:0px auto;
-        .pic_font{
+
+    .News_pic {
+        margin: 0px auto;
+
+        .pic_font {
             color: white;
             margin-top: -30px;
             margin-left: 5px;
             font-weight: bold;
         }
-        img{
+
+        img {
             width: 300px;
             height: 300px;
-            
+
 
         }
     }
-    ul{
-        
-        li{
+
+    ul {
+        list-style: disc;
+        color: gray;
+
+        li {
             margin-bottom: 10px;
-            a{
+
+            a {
                 // text-decoration: none;
                 color: green;
             }
-            :hover{
-                color:red;
+
+            :hover {
+                color: red;
             }
         }
-        
-        
+
+
     }
 
+}
+
+.topbar-warpper {
+    // background-color: rgba(220, 220, 220, .9);
+    background-image: linear-gradient(to bottom,rgba(210, 210, 210, .9),gray);
+    // line-height: 15px;
+    height: 25px;
+    width: 100%;
+    margin-bottom: 10px;
+    padding-top: 5px;
+    border-top: 1px solid rgba(210, 210, 210, .9);
+    border-bottom: 1px solid rgba(210, 210, 210, .9);
+
+    .topbar {
+        display: flex;
+        justify-content: space-between;
+        flex-flow: row wrap;
+        // position: relative;
+        .location {
+            // flex-grow: 1;
+            margin-left: 50px;
+            padding-bottom: 7px;
+            position: relative;
+            // :hover{
+            //     background-color: white;
+            // }
+            a {
+                color: white;
+                font-size: 14px;
+            }
+
+            i {
+                color: rgb(170, 44, 44);
+            }
+
+            .citylist {
+                // 开启绝对定位，脱离文档流，就不会溢出
+                position: absolute;
+                display: none;
+                width: 320px;
+                height: 436px;
+                // background-color: white;
+                border: 1px solid rgba(210, 210, 210, .9);
+                z-index: 999;
+
+                ul {
+                    list-style: none;
+
+                    li {
+                        float: left;
+                        margin: 5px;
+
+                    }
+                }
+            }
+            .currentcity{
+                position: relative;
+                //加一个透明边框
+                // 使得鼠标放上去后不会因为加了边框而移动
+                border: 2px solid transparent;
+                z-index: 99999;
+               
+            }
+            .currentcity:hover {
+                color: red;
+                padding-bottom: 1px;
+                border: 1px solid rgba(210, 210, 210, .9);
+                border-bottom: 0;
+                // background-color: white;
+
+
+            }
+        }
+
+        // 下拉框：鼠标置于两块区域，两块均为白色且城市列表显示
+        // (鼠标放在父元素上，对主元素的属性进行设置)
+        //也就是说，下拉框和导航栏相应文字必须在同一个box内
+        .location:hover .citylist,
+        .location:hover .currentcity {
+            background-color: white;
+            display: block;
+        }
+
+        .shotcut {
+            // flex-grow: 2;
+            margin-top: 0;
+            margin-right: 10px;
+            list-style: none;
+            position: relative;
+            li {
+                font-size: 14px;
+                float: left;
+                margin: 0 5px;
+                border: 2px solid transparent;
+                a {
+                    color: white;
+                }
+
+                :hover {
+                    color: red;
+                }
+            }
+            .navlist,.servicelist{
+                // 开启绝对定位，脱离文档流，就不会溢出
+                position: absolute;
+                display: none;
+                width: 320px;
+                height: 436px;
+                // background-color: white;
+                border: 1px solid rgba(210, 210, 210, .9);
+                z-index: 999;
+            }
+            .nav:hover,.service:hover{
+                padding-bottom: 2px;
+                border: 1px solid rgba(210, 210, 210, .9);
+                border-bottom: none;
+            }
+            .navcut,.servicecut{
+                position: relative;
+                z-index: 99999;
+            }
+            .nav:hover .navlist,.nav:hover .navcut,.service:hover .servicelist,.service:hover .servicecut{
+                display: block;
+                background-color: white;
+            }
+            .line {
+                color: grey;
+                margin: 0 1px;
+                font-size: 12px;
+            }
+
+
+        }
+    }
 }

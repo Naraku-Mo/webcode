@@ -2,6 +2,7 @@
 body{
     /* 透视效果 */
     perspective:800px;
+    /* animation-play-state: paused; */
 }
 body:hover .sample{
     transform:translateZ(100px);
@@ -101,7 +102,7 @@ ol li::before{
     /* background-color: aquamarine; */
     position: relative;
     transition: all .3s;
-    z-index: 999999;
+    z-index: 9;
 
     
 }
@@ -116,12 +117,72 @@ ol li::before{
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
 .box0{
-    /* height: 50px;
-    width:50px; */
+    width: 5px;
+    height: 5px;
+    /* width:50px;  */
     background-color: brown;
     transition: 0.5s;
     margin: 5px auto;
 }
 body:hover .box0{
-    transform: scaleX(10);
+    transform: scale(5);
+    /* transform: scaleY(0.5); */
+}
+.trump{
+    
+    margin: 5px auto;
+    width:137px;
+    height: 129.5px;
+    background-image: url('./picture/trump.png');
+    animation: run1 0.5s steps(6) infinite;
+    /* ,run1 0.5s steps(6) infinite,run2 0.5s steps(6) infinite,run3 0.5s steps(6) infinite,run4 0.5s steps(6) infinite; */
+   
+}
+.trump:hover{
+    animation-play-state: running;
+}
+@keyframes run {
+    from{
+        background-position: 0 0;
+    }
+    to{
+        background-position: -801px 0;
+    }
+    
+}
+@keyframes run1 {
+    from{
+        background-position: 0 -129.5px;
+    }
+    to{
+        background-position: -801px -129.5px;
+    }
+    
+}
+@keyframes run2 {
+    from{
+        background-position: 0 -295px;
+    }
+    to{
+        background-position: -801px -295px;
+    }
+    
+}
+@keyframes run3 {
+    from{
+        background-position: 0 -388.5px;
+    }
+    to{
+        background-position: -801px -388.5px;
+    }
+    
+}
+@keyframes run4 {
+    from{
+        background-position: 0 -518px;
+    }
+    to{
+        background-position: -801px -518px;
+    }
+    
 }

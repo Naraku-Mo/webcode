@@ -1,6 +1,3 @@
-* {
-  list-style: none;
-}
 a {
   text-decoration: none;
 }
@@ -13,6 +10,7 @@ a {
   width: 220px;
 }
 .box_p54 ul {
+  list-style: none;
   height: 650px;
   display: flex;
   justify-content: space-between;
@@ -25,16 +23,23 @@ a {
   width: 200px;
   height: 200px;
 }
-dl {
+.love {
+  list-style: none;
+  margin-left: 500px;
   width: 300px;
 }
-dl .item {
-  margin: 20px;
+.love .item {
+  margin: 20px 50px;
 }
-dl .item:hover {
+.love .item::before {
+  content: '❤️';
+  font-size: 16px;
+  margin: 0 5px;
+}
+.love .item:hover {
   background-color: bisque;
 }
-dl .item:active {
+.love .item:active {
   color: aqua;
 }
 .News_nav {
@@ -73,6 +78,10 @@ dl .item:active {
   width: 300px;
   height: 300px;
 }
+.News_nav ul {
+  list-style: disc;
+  color: gray;
+}
 .News_nav ul li {
   margin-bottom: 10px;
 }
@@ -81,5 +90,112 @@ dl .item:active {
 }
 .News_nav ul li :hover {
   color: red;
+}
+.topbar-warpper {
+  background-image: linear-gradient(to bottom, rgba(210, 210, 210, 0.9), gray);
+  height: 25px;
+  width: 100%;
+  margin-bottom: 10px;
+  padding-top: 5px;
+  border-top: 1px solid rgba(210, 210, 210, 0.9);
+  border-bottom: 1px solid rgba(210, 210, 210, 0.9);
+}
+.topbar-warpper .topbar {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+}
+.topbar-warpper .topbar .location {
+  margin-left: 50px;
+  padding-bottom: 7px;
+  position: relative;
+}
+.topbar-warpper .topbar .location a {
+  color: white;
+  font-size: 14px;
+}
+.topbar-warpper .topbar .location i {
+  color: #aa2c2c;
+}
+.topbar-warpper .topbar .location .citylist {
+  position: absolute;
+  display: none;
+  width: 320px;
+  height: 436px;
+  border: 1px solid rgba(210, 210, 210, 0.9);
+  z-index: 999;
+}
+.topbar-warpper .topbar .location .citylist ul {
+  list-style: none;
+}
+.topbar-warpper .topbar .location .citylist ul li {
+  float: left;
+  margin: 5px;
+}
+.topbar-warpper .topbar .location .currentcity {
+  position: relative;
+  border: 2px solid transparent;
+  z-index: 99999;
+}
+.topbar-warpper .topbar .location .currentcity:hover {
+  color: red;
+  padding-bottom: 1px;
+  border: 1px solid rgba(210, 210, 210, 0.9);
+  border-bottom: 0;
+}
+.topbar-warpper .topbar .location:hover .citylist,
+.topbar-warpper .topbar .location:hover .currentcity {
+  background-color: white;
+  display: block;
+}
+.topbar-warpper .topbar .shotcut {
+  margin-top: 0;
+  margin-right: 10px;
+  list-style: none;
+  position: relative;
+}
+.topbar-warpper .topbar .shotcut li {
+  font-size: 14px;
+  float: left;
+  margin: 0 5px;
+  border: 2px solid transparent;
+}
+.topbar-warpper .topbar .shotcut li a {
+  color: white;
+}
+.topbar-warpper .topbar .shotcut li :hover {
+  color: red;
+}
+.topbar-warpper .topbar .shotcut .navlist,
+.topbar-warpper .topbar .shotcut .servicelist {
+  position: absolute;
+  display: none;
+  width: 320px;
+  height: 436px;
+  border: 1px solid rgba(210, 210, 210, 0.9);
+  z-index: 999;
+}
+.topbar-warpper .topbar .shotcut .nav:hover,
+.topbar-warpper .topbar .shotcut .service:hover {
+  padding-bottom: 2px;
+  border: 1px solid rgba(210, 210, 210, 0.9);
+  border-bottom: none;
+}
+.topbar-warpper .topbar .shotcut .navcut,
+.topbar-warpper .topbar .shotcut .servicecut {
+  position: relative;
+  z-index: 99999;
+}
+.topbar-warpper .topbar .shotcut .nav:hover .navlist,
+.topbar-warpper .topbar .shotcut .nav:hover .navcut,
+.topbar-warpper .topbar .shotcut .service:hover .servicelist,
+.topbar-warpper .topbar .shotcut .service:hover .servicecut {
+  display: block;
+  background-color: white;
+}
+.topbar-warpper .topbar .shotcut .line {
+  color: grey;
+  margin: 0 1px;
+  font-size: 12px;
 }
 /*# sourceMappingURL=./syntax.css.map */
