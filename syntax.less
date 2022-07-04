@@ -1,0 +1,109 @@
+// less可编译为css语法，会自动存储到同名css文件中，小心覆盖！
+@h: 50px;
+
+* {
+    list-style: none;
+
+}
+a{
+    text-decoration: none;
+}
+.box0 {
+    height: @h;
+    width: $height;
+}
+
+.box_p54 {
+    background-color: bisque;
+    width:220px;
+    ul {
+        height: 650px;
+        // width: 220px;
+        display: flex;
+        justify-content: space-between;
+        flex-flow: column wrap;
+
+        li {
+
+            flex-grow: 1;
+
+            img {
+                width: 200px;
+                height: 200px;
+            }
+        }
+    }
+}
+
+dl {
+    width: 300px;
+    .item{
+        margin: 20px;
+    }
+    .item:hover {
+        background-color: bisque;
+    }
+    .item:active{
+        color: aqua;
+    }
+
+}
+.News_nav{
+    height: 520px;
+    width: 350px;
+    display: flex;
+    justify-content:space-between;
+    flex-flow: column wrap;
+    background-color:white;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0,0.5);
+    position: relative;
+    bottom: 500px;
+    float: right;
+    border-top: 2px solid gray;
+    margin-right: 20px;
+    .News_title{
+        margin:0;
+        padding-top: 10px;
+        // display: inline-block;
+        // border-top: 3px solid red;
+        a{
+            padding-top: 10px;
+            color:rgb(56, 53, 53);
+            border-top: 2px solid red;
+            // text-decoration: none;
+           
+        }
+    }
+   
+    .News_pic{
+        margin:0px auto;
+        .pic_font{
+            color: white;
+            margin-top: -30px;
+            margin-left: 5px;
+            font-weight: bold;
+        }
+        img{
+            width: 300px;
+            height: 300px;
+            
+
+        }
+    }
+    ul{
+        
+        li{
+            margin-bottom: 10px;
+            a{
+                // text-decoration: none;
+                color: green;
+            }
+            :hover{
+                color:red;
+            }
+        }
+        
+        
+    }
+
+}
